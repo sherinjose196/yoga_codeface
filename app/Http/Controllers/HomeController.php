@@ -26,11 +26,11 @@ class HomeController extends Controller
     public function index()
     {
 
-        $data = Array();
-          $data['user'] = User::where('id',Auth::user()->id)->first();
+        
 
-        return view('home')->with($data);;
+        return view('home');
     }
+   
     public function getView($id = 0)
     {
         $view = '';
