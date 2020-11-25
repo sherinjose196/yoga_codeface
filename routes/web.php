@@ -22,6 +22,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index');
     Route::get('home', 'HomeController@index');
     Route::get('logout', 'Auth\LoginController@logout');
+
+    
+    Route::get('payment-initiate', ['as' => 'Payment', 'uses' => 'RazorpayController@getView']);
+
+    // for Initiate the order
+    Route::post('/payment-initiate-request','RazorpayController@Initiate');
+    
+    // for Payment RazorpayController
+    Route::post('/payment-complete','RazorpayController@Complete');
 });
 
 
