@@ -142,7 +142,7 @@
 								<div class="col-lg-6 col-md-6 col-6 col-sm-12">
 									<!-- start box -->
 									<div class="box difference">
-										<span><span><a href=""> <img src="{{ url('/works/1/2x.jpg') }}"></a></span></span>
+										<span><span><a href="{{ URL::route('Payment') }}"> <img src="{{ url('/works/1/2x.jpg') }}"></a></span></span>
 									</div>
 									<!-- end box -->
 								</div>
